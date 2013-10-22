@@ -46,8 +46,8 @@ void readSpectrum()
   int Band;
   for(Band=0;Band <7; Band++)
   {
-    spectrumLeft[Band] = analogRead(0); //left
-    spectrumRight[Band] = analogRead(1); //right
+    spectrumLeft[Band] = analogRead(0)/4; //left
+    spectrumRight[Band] = analogRead(1)/4; //right
     digitalWrite(4,HIGH);  //Strobe pin on the shield
     digitalWrite(4,LOW);     
   }
